@@ -5,7 +5,7 @@ Summary(pl):	Program konfiguruj±cy interfejsy szeregowe
 Summary(tr):	Seri arayüz ayarlama programý
 Name:		setserial
 Version:	2.15
-Release:	6
+Release:	7
 Copyright:	GPL
 Group:		Utilities/System
 Group(pl):	Narzêdzia/System
