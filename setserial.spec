@@ -15,6 +15,7 @@ Release:	11
 License:	GPL
 Group:		Applications/System
 Source0:	ftp://tsx-11.mit.edu/pub/linux/sources/sbin/%{name}-%{version}.tar.gz
+# Source0-md5: c4867d72c41564318e0107745eb7a0f2
 Source1:	%{name}-rc.serial
 Source2:	%{name}.8.pl
 BuildRequires:	autoconf
