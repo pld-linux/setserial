@@ -63,7 +63,7 @@ Setserial - программа, которая позволяет узнать и изменить различные
 autoconf
 LDFLAGS="-s"; export LDFLAGS
 %configure
-make   
+%{__make}   
 
 %install
 rm -rf $RPM_BUILD_ROOT
