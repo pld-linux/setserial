@@ -5,12 +5,13 @@ Summary(pl):	Program konfiguruj±cy interfejsy szeregowe
 Summary(tr):	Seri arayüz ayarlama programý
 Name:		setserial
 Version:	2.15
-Release:	7
+Release:	8
 Copyright:	GPL
 Group:		Utilities/System
 Group(pl):	Narzêdzia/System
 Source0:	ftp://sunsite.unc.edu/pub/Linux/system/serial/%{name}-%{version}.tar.gz
 Source1:	setserial-rc.serial
+Source2:	setserial.8.pl
 Patch0:		%{name}.patch
 Patch1:		%{name}-debian.patch
 Prereq:		/sbin/chkconfig
@@ -60,10 +61,12 @@ make
 %install
 rm -rf $RPM_BUILD_ROOT
 
-install -d $RPM_BUILD_ROOT/{bin,%{_mandir}/man8,etc/{rc.d/init.d,sysconfig}}
+install -d $RPM_BUILD_ROOT/{bin,%{_mandir}/{man8,pl/man8},etc/{rc.d/init.d,sysconfig}}
 
 install setserial $RPM_BUILD_ROOT/bin
 install setserial.8 $RPM_BUILD_ROOT%{_mandir}/man8
+install %{SOURCE2} $RPM_BUILD_ROOT%{_mandir}/pl/man8/setserial.8
+
 install serial.conf $RPM_BUILD_ROOT/etc/sysconfig/serial
 
 cat << EOF > $RPM_BUILD_ROOT/etc/sysconfig/serial
@@ -74,7 +77,8 @@ cat << EOF > $RPM_BUILD_ROOT/etc/sysconfig/serial
 EOF
 install %{SOURCE1} $RPM_BUILD_ROOT/etc/rc.d/rc.serial
 
-gzip -9fn $RPM_BUILD_ROOT%{_mandir}/man8/* README 
+gzip -9fn $RPM_BUILD_ROOT%{_mandir}/{man8/*,pl/man8/*} \
+	README 
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -86,4 +90,6 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) /bin/setserial
 %attr(754,root,root) /etc/rc.d/rc.serial
 %attr(640,root,root) %config %verify(not size mtime md5) /etc/sysconfig/*
+
 %{_mandir}/man8/*
+%lang(pl) %{_mandir}/pl/man8/*
