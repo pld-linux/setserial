@@ -71,39 +71,3 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) /bin/setserial
 %attr(640,root,root) %config %verify(not size mtime md5) /etc/sysconfig/*
 %{_mandir}/man8/*
-
-%changelog
-* Thu Feb 18 1999 Wojtek ¦lusarczyk <wojtek@shadow.eu.org>
-  [2.15-4d]
-- compressed documentation,
-- fixed Group.
-
-* Thu Feb 18 1999 Arkadiusz Mi¶kiewicz <misiek@misiek.eu.org>
-  [2.15-3d]
-- configuration file in new location
-
-* Thu Dec 24 1998 Arkadiusz Mi¶kiewicz <misiek@misiek.eu.org>
-  [2.15-2d]
-- removed /etc/rc.d/init.d/serial (this is now done by rc-scripts).
-
-* Sat Nov 07 1998 Arkadiusz Mi¶kiewicz <misiek@misiek.eu.org>
-  [2.15-1d]
-- new upstream release (2.15),
-- added /etc/rc.d/init.d/serial and /etc/serial.conf,
-- added Group(pl),
-- added %post and %preun.
-
-* Mon Oct 26 1998 Wojtek ¦lusarczyk <wojtek@shadow.eu.org>
-  [2.14-1d]
-- updated to 2.14,
-- minor changes.
-
-* Sun Oct 18 1998 Marcin Korzonek <mkorz@shadow.eu.org>
-  [2.12-5d]
-- translations modified for pl,
-- defined files permission,
-- simplifications in %build and %install section.
-
-* Thu Jul 23 1998 Wojtek ¦lusarczyk <wojtek@shadow.eu.org>
-  [2.12-5]
-- build against GNU libc-2.1.
