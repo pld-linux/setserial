@@ -14,7 +14,7 @@ Version:	2.17
 Release:	11
 License:	GPL
 Group:		Applications/System
-Source0:	ftp://sunsite.unc.edu/pub/Linux/system/serial/%{name}-%{version}.tar.gz
+Source0:	ftp://tsx-11.mit.edu/pub/linux/sources/sbin/%{name}-%{version}.tar.gz
 Source1:	%{name}-rc.serial
 Source2:	%{name}.8.pl
 BuildRequires:	autoconf
