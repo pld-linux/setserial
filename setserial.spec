@@ -70,7 +70,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %attr(755,root,root) /bin/setserial
 %attr(640,root,root) %config %verify(not size mtime md5) /etc/sysconfig/*
-%attr(644,root, man) %{_mandir}/man8/*
+%{_mandir}/man8/*
 
 %changelog
 * Thu Feb 18 1999 Wojtek ¦lusarczyk <wojtek@shadow.eu.org>
