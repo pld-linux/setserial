@@ -14,7 +14,7 @@ Group(pl):	Aplikacje/System
 Source0:	ftp://sunsite.unc.edu/pub/Linux/system/serial/%{name}-%{version}.tar.gz
 Source1:	%{name}-rc.serial
 Source2:	%{name}.8.pl
-Prereq:		rc-scripts
+Requires:		rc-scripts
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
