@@ -54,7 +54,7 @@ Setserial, bir seri aygýtýn baðlantý noktasý, kesme numarasý gibi
 %setup -q
 
 %build
-autoconf
+%{__autoconf}
 %configure
 %{__make}
 
