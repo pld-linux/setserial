@@ -6,7 +6,7 @@ Summary(tr):	Seri arayЭz ayarlama programЩ
 Summary(ru):	Программа для настройки драйвера последовательного порта
 Name:		setserial
 Version:	2.17
-Release:	3
+Release:	4
 License:	GPL
 Group:		Applications/System
 Group(de):	Applikationen/System
@@ -14,7 +14,7 @@ Group(pl):	Aplikacje/System
 Source0:	ftp://sunsite.unc.edu/pub/Linux/system/serial/%{name}-%{version}.tar.gz
 Source1:	%{name}-rc.serial
 Source2:	%{name}.8.pl
-Prereq:		/sbin/chkconfig
+Prereq:		rc-scripts
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -68,7 +68,6 @@ autoconf
 
 %install
 rm -rf $RPM_BUILD_ROOT
-
 install -d $RPM_BUILD_ROOT/{bin,%{_mandir}/{man8,pl/man8},etc/{rc.d/init.d,sysconfig}}
 
 install setserial $RPM_BUILD_ROOT/bin
