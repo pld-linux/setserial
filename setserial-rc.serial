@@ -17,7 +17,7 @@ SETSERIAL=/bin/setserial
 
 . /etc/rc.d/init.d/functions
 
-ALLDEVS="/dev/ttyS*"
+ALLDEVS="/dev/ttyS[0-9]*"
 
 show "Setting serial ports "; started
 if test -f /etc/sysconfig/serial ; then 
