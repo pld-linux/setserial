@@ -1,0 +1,5 @@
+- release changed to 5.1,
+- removed URL,
+- full Source Url,
+- added text in %description about /etc/sysconfig/serial,
+- /etc/rc.d/rc.serial moved from rc-scripts.
