@@ -19,7 +19,7 @@ SETSERIAL=/bin/setserial
 
 ALLDEVS="/dev/ttyS*"
 
-show "Setting serial ports "; started
+show "Setting serial ports "; busy
 if test -f /etc/sysconfig/serial ; then 
 	grep -v "^#" < /etc/sysconfig/serial | grep "/dev/" | while read device args; 
 	do
@@ -34,3 +34,5 @@ for a in ${ALLDEVS}; do
 	fi
 done
 
+deltext
+ok
