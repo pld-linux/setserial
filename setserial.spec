@@ -2,11 +2,12 @@ Summary:	Serial interface configuration program
 Summary(de):	Konfigurationsprogramm fЭr die serielle Schnittstelle
 Summary(fr):	Programme de configuration de l'interface sИrie
 Summary(pl):	Program konfiguruj╠cy interfejsy szeregowe
+Summary(ru): Программа для конфигурации последовательных интерфейсов
 Summary(tr):	Seri arayЭz ayarlama programЩ
-Summary(ru):	Программа для настройки драйвера последовательного порта
+Summary(uk):	Програма для конф╕гурац╕╖ посл╕довних ╕нтерфейс╕в
 Name:		setserial
 Version:	2.17
-Release:	4
+Release:	7
 License:	GPL
 Group:		Applications/System
 Source0:	ftp://sunsite.unc.edu/pub/Linux/system/serial/%{name}-%{version}.tar.gz
@@ -15,6 +16,7 @@ Source2:	%{name}.8.pl
 Requires:	rc-scripts
 BuildRequires:	autoconf
 Buildrequires:	groff
+ExcludeArch:	s390 s390x
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -47,16 +49,6 @@ mo©na wstawiaФ do pliku /etc/sysconfig/serial w formacie:
 Setserial, bir seri aygЩtЩn baПlantЩ noktasЩ, kesme numarasЩ gibi
 Жzelliklerini denetlemenizi ve deПiЧtirmenizi saПlayan bir programdЩr.
 
-%description -l ru
-Setserial - программа, которая позволяет узнать и изменить различные
-параметры последовательных устройств, включая адрес порта, номер
-прерывания и т.п.
-
-Начиная с Linux 0.99 pl10, автоматически конфигурируются только
-COM1-4, для чего используются прерывания 3 и 4. Если же у Вас имеются
-дополнительные последовательные порты, или если COM3-4 имеют
-нестандартные настройки, для правильной работы Вам нужно использовать
-данную программу.
 
 %prep
 %setup -q
