@@ -97,7 +97,7 @@ rm -rf $RPM_BUILD_ROOT
 %doc README
 %attr(755,root,root) /bin/setserial
 %attr(754,root,root) /etc/rc.d/rc.serial
-%attr(640,root,root) %config %verify(not size mtime md5) /etc/sysconfig/*
+%attr(640,root,root) %config(noreplace) %verify(not size mtime md5) /etc/sysconfig/*
 
 %{_mandir}/man8/*
 %lang(pl) %{_mandir}/pl/man8/*
