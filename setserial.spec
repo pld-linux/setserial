@@ -11,7 +11,7 @@ Summary(zh_CN):	[ÏµÍ³]ÅäÖÃ´®¿ÚµÄ¹¤¾ß
 Summary(zh_TW):	[-A¨t$)B²Î]-A°t¸m$)B¦ê-A¤f$)Bªº-A¤u$)B¨ã
 Name:		setserial
 Version:	2.17
-Release:	12
+Release:	13
 License:	GPL
 Group:		Applications/System
 Source0:	ftp://tsx-11.mit.edu/pub/linux/sources/sbin/%{name}-%{version}.tar.gz
