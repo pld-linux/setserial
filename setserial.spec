@@ -64,7 +64,7 @@ COM1-4, для чего используются прерывания 3 и 4. Если же у Вас имеются
 %build
 autoconf
 %configure
-%{__make}   
+%{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -83,14 +83,14 @@ cat << EOF > $RPM_BUILD_ROOT/etc/sysconfig/serial
 EOF
 install %{SOURCE1} $RPM_BUILD_ROOT/etc/rc.d/rc.serial
 
-gzip -9nf README 
+gzip -9nf README
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz 
+%doc *.gz
 %attr(755,root,root) /bin/setserial
 %attr(754,root,root) /etc/rc.d/rc.serial
 %attr(640,root,root) %config %verify(not size mtime md5) /etc/sysconfig/*
