@@ -1,7 +1,7 @@
 Summary:     Serial interface configuration program
 Name: 	     setserial
 Version:     2.15
-Release:     2d
+Release:     3d
 Copyright:   GPL
 Group: 	     Utilities/System
 Group(pl):   U¿ytki/System
@@ -52,11 +52,11 @@ make
 %install
 rm -rf $RPM_BUILD_ROOT
 
-install -d $RPM_BUILD_ROOT/{bin,usr/man/man8,etc/rc.d/init.d}
+install -d $RPM_BUILD_ROOT/{bin,usr/man/man8,etc/{rc.d/init.d,sysconfig}
 
 install setserial $RPM_BUILD_ROOT/bin
 install setserial.8 $RPM_BUILD_ROOT/usr/man/man8
-install serial.conf $RPM_BUILD_ROOT/etc
+install serial.conf $RPM_BUILD_ROOT/etc/sysconfig/serial
 
 bzip2 -9 $RPM_BUILD_ROOT/usr/man/man8/*
 
@@ -68,10 +68,13 @@ rm -rf $RPM_BUILD_ROOT
 %doc README 
 
 %attr(711,root,root) /bin/setserial
-%attr(640,root,root) %config(noreplace) %verify(not size mtime md5) /etc/*.conf
+%attr(640,root,root) %config(noreplace) %verify(not size mtime md5) /etc/sysconfig/serial
 %attr(644,root, man) /usr/man/man8/*
 
 %changelog
+* Thu Feb 18 1999 Arkadiusz Mi¶kiewicz <misiek@misiek.eu.org>
+- configuration file in new location
+
 * Thu Dec 24 1998 Arkadiusz Mi¶kiewicz <misiek@misiek.eu.org>
 [2.15-2d]
 - removed /etc/rc.d/init.d/serial (this is now done by rc-scripts).
