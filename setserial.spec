@@ -53,6 +53,7 @@ Setserial, bir seri aygýtýn baðlantý noktasý, kesme numarasý gibi
 
 %build
 autoconf
+LDFLAGS="-s"; export LDFLAGS
 %configure
 make   
 
