@@ -5,16 +5,14 @@ Summary(pl):	Program konfiguruj╠cy interfejsy szeregowe
 Summary(tr):	Seri arayЭz ayarlama programЩ
 Summary(ru):	Программа для настройки драйвера последовательного порта
 Name:		setserial
-Version:	2.15
-Release:	25
+Version:	2.17
+Release:	1
 License:	GPL
 Group:		Utilities/System
 Group(pl):	NarzЙdzia/System
 Source0:	ftp://sunsite.unc.edu/pub/Linux/system/serial/%{name}-%{version}.tar.gz
 Source1:	setserial-rc.serial
 Source2:	setserial.8.pl
-Patch0:		%{name}.patch
-Patch1:		%{name}-debian.patch
 Prereq:		/sbin/chkconfig
 Buildroot:	/tmp/%{name}-%{version}-root
 
@@ -60,12 +58,10 @@ Setserial - программа, которая позволяет узнать и изменить различные
 
 %prep
 %setup -q
-%patch0 -p1
-%patch1 -p1
 
 %build
 autoconf
-CFLAGS="-s $RPM_OPTFLAGS"; export LDFLAGS
+LDFLAGS="-s"; export LDFLAGS
 %configure
 make   
 
