@@ -3,10 +3,11 @@ Summary(de):	Konfigurationsprogramm fЭr die serielle Schnittstelle
 Summary(fr):	Programme de configuration de l'interface sИrie
 Summary(pl):	Program konfiguruj╠cy interfejsy szeregowe
 Summary(tr):	Seri arayЭz ayarlama programЩ
+Summary(ru):	Программа для настройки драйвера последовательного порта
 Name:		setserial
 Version:	2.15
-Release:	8
-Copyright:	GPL
+Release:	25
+License:	GPL
 Group:		Utilities/System
 Group(pl):	NarzЙdzia/System
 Source0:	ftp://sunsite.unc.edu/pub/Linux/system/serial/%{name}-%{version}.tar.gz
@@ -47,6 +48,16 @@ pliku /etc/sysconfig/serial w formacie:
 Setserial, bir seri aygЩtЩn baПlantЩ noktasЩ, kesme numarasЩ gibi
 Жzelliklerini denetlemenizi ve deПiЧtirmenizi saПlayan bir programdЩr.
 
+%description -l ru
+Setserial - программа, которая позволяет узнать и изменить различные
+параметры последовательных устройств, включая адрес порта, номер
+прерывания и т.п.
+
+Начиная с Linux 0.99 pl10, автоматически конфигурируются только COM1-4,
+для чего используются прерывания 3 и 4. Если же у Вас имеются
+дополнительные последовательные порты, или если COM3-4 имеют нестандартные
+настройки, для правильной работы Вам нужно использовать данную программу.
+
 %prep
 %setup -q
 %patch0 -p1
@@ -54,7 +65,7 @@ Setserial, bir seri aygЩtЩn baПlantЩ noktasЩ, kesme numarasЩ gibi
 
 %build
 autoconf
-LDFLAGS="-s"; export LDFLAGS
+CFLAGS="-s $RPM_OPTFLAGS"; export LDFLAGS
 %configure
 make   
 
