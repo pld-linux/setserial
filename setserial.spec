@@ -9,8 +9,6 @@ Version:	2.17
 Release:	4
 License:	GPL
 Group:		Applications/System
-Group(de):	Applikationen/System
-Group(pl):	Aplikacje/System
 Source0:	ftp://sunsite.unc.edu/pub/Linux/system/serial/%{name}-%{version}.tar.gz
 Source1:	%{name}-rc.serial
 Source2:	%{name}.8.pl
