@@ -12,6 +12,7 @@ Group(pl):	Narzêdzia/System
 Source0:	ftp://sunsite.unc.edu/pub/Linux/system/serial/%{name}-%{version}.tar.gz
 Source1:	setserial-rc.serial
 Patch0:		%{name}.patch
+Patch1:		%{name}-debian.patch
 Prereq:		/sbin/chkconfig
 Buildroot:	/tmp/%{name}-%{version}-root
 
@@ -47,7 +48,8 @@ Setserial, bir seri aygýtýn baðlantý noktasý, kesme numarasý gibi
 
 %prep
 %setup -q
-%patch -p1
+%patch0 -p1
+%patch1 -p1
 
 %build
 autoconf
