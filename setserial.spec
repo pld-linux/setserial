@@ -55,10 +55,10 @@ rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT/{bin,usr/man/man8,etc/{rc.d/init.d,sysconfig}}
 
 install setserial $RPM_BUILD_ROOT/bin
-install setserial.8 $RPM_BUILD_ROOT/usr/man/man8
+install setserial.8 $RPM_BUILD_ROOT%{_mandir}/man8
 install serial.conf $RPM_BUILD_ROOT/etc/sysconfig/serial
 
-gzip -9fn $RPM_BUILD_ROOT/usr/man/man8/*
+gzip -9fn $RPM_BUILD_ROOT%{_mandir}/man8/*
 bzip2 -9  README 
 
 %clean
@@ -70,7 +70,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %attr(755,root,root) /bin/setserial
 %attr(640,root,root) %config %verify(not size mtime md5) /etc/sysconfig/*
-%attr(644,root, man) /usr/man/man8/*
+%attr(644,root, man) %{_mandir}/man8/*
 
 %changelog
 * Thu Feb 18 1999 Wojtek ¦lusarczyk <wojtek@shadow.eu.org>
