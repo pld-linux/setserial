@@ -5,7 +5,7 @@ Summary(pl):	Program konfiguruj±cy interfejsy szeregowe
 Summary(tr):	Seri arayüz ayarlama programý
 Name:		setserial
 Version:	2.15
-Release:	4d
+Release:	5
 Copyright:	GPL
 Group:		Utilities/System
 Group(pl):	Narzêdzia/System
@@ -44,29 +44,26 @@ Setserial, bir seri aygýtýn baðlantý noktasý, kesme numarasý gibi
 
 %build
 autoconf
-CFLAGS=$RPM_OPT_FLAGS LDFLAGS=-s \
-    ./configure %{_target_platform} \
-	--prefix=/usr
+%configure
 make   
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-install -d $RPM_BUILD_ROOT/{bin,usr/man/man8,etc/{rc.d/init.d,sysconfig}}
+install -d $RPM_BUILD_ROOT/{bin,%{_mandir}/man8,etc/{rc.d/init.d,sysconfig}}
 
 install setserial $RPM_BUILD_ROOT/bin
 install setserial.8 $RPM_BUILD_ROOT%{_mandir}/man8
 install serial.conf $RPM_BUILD_ROOT/etc/sysconfig/serial
 
-gzip -9fn $RPM_BUILD_ROOT%{_mandir}/man8/*
-bzip2 -9  README 
+gzip -9fn $RPM_BUILD_ROOT%{_mandir}/man8/* README 
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc README.bz2 
+%doc README.gz 
 
 %attr(755,root,root) /bin/setserial
 %attr(640,root,root) %config %verify(not size mtime md5) /etc/sysconfig/*
