@@ -11,15 +11,15 @@ Summary(zh_CN):	[ÏµÍ³]ÅäÖÃ´®¿ÚµÄ¹¤¾ß
 Summary(zh_TW):	[-A¨t$)B²Î]-A°t¸m$)B¦ê-A¤f$)Bªº-A¤u$)B¨ã
 Name:		setserial
 Version:	2.17
-Release:	10
+Release:	11
 License:	GPL
 Group:		Applications/System
 Source0:	ftp://sunsite.unc.edu/pub/Linux/system/serial/%{name}-%{version}.tar.gz
 Source1:	%{name}-rc.serial
 Source2:	%{name}.8.pl
-Requires:	rc-scripts
 BuildRequires:	autoconf
-Buildrequires:	groff
+BuildRequires:	groff
+Requires:	rc-scripts
 ExcludeArch:	s390 s390x
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
