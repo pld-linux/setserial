@@ -14,7 +14,7 @@ Source0:	ftp://sunsite.unc.edu/pub/Linux/system/serial/%{name}-%{version}.tar.gz
 Source1:	setserial-rc.serial
 Source2:	setserial.8.pl
 Prereq:		/sbin/chkconfig
-Buildroot:	/tmp/%{name}-%{version}-root
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 Setserial is a program which allows you to look at and change various
@@ -79,7 +79,6 @@ install serial.conf $RPM_BUILD_ROOT/etc/sysconfig/serial
 cat << EOF > $RPM_BUILD_ROOT/etc/sysconfig/serial
 # File format:
 # /dev/<serial_device>	<setup parameters>
-
 
 EOF
 install %{SOURCE1} $RPM_BUILD_ROOT/etc/rc.d/rc.serial
