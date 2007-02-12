@@ -1,14 +1,14 @@
 Summary:	Serial interface configuration program
-Summary(de.UTF-8):   Konfigurationsprogramm für die serielle Schnittstelle
-Summary(es.UTF-8):   Programa de configuración de interface serial
-Summary(fr.UTF-8):   Programme de configuration de l'interface série
-Summary(pl.UTF-8):   Program konfigurujący interfejsy szeregowe
-Summary(pt_BR.UTF-8):   Programa de configuração de interface serial
-Summary(ru.UTF-8):   Программа для конфигурации последовательных интерфейсов
-Summary(tr.UTF-8):   Seri arayüz ayarlama programı
-Summary(uk.UTF-8):   Програма для конфігурації послідовних інтерфейсів
-Summary(zh_CN.UTF-8):   [系统]配置串口的工具
-Summary(zh_TW.UTF-8):   [-A系$)B統]-A配置$)B串-A口$)B的-A工$)B具
+Summary(de.UTF-8):	Konfigurationsprogramm für die serielle Schnittstelle
+Summary(es.UTF-8):	Programa de configuración de interface serial
+Summary(fr.UTF-8):	Programme de configuration de l'interface série
+Summary(pl.UTF-8):	Program konfigurujący interfejsy szeregowe
+Summary(pt_BR.UTF-8):	Programa de configuração de interface serial
+Summary(ru.UTF-8):	Программа для конфигурации последовательных интерфейсов
+Summary(tr.UTF-8):	Seri arayüz ayarlama programı
+Summary(uk.UTF-8):	Програма для конфігурації послідовних інтерфейсів
+Summary(zh_CN.UTF-8):	[系统]配置串口的工具
+Summary(zh_TW.UTF-8):	[-A系$)B統]-A配置$)B串-A口$)B的-A工$)B具
 Name:		setserial
 Version:	2.17
 Release:	13
