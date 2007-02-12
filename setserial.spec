@@ -1,14 +1,14 @@
 Summary:	Serial interface configuration program
-Summary(de):	Konfigurationsprogramm für die serielle Schnittstelle
-Summary(es):	Programa de configuración de interface serial
-Summary(fr):	Programme de configuration de l'interface série
-Summary(pl):	Program konfiguruj±cy interfejsy szeregowe
-Summary(pt_BR):	Programa de configuração de interface serial
-Summary(ru):	ğÒÏÇÒÁÍÍÁ ÄÌÑ ËÏÎÆÉÇÕÒÁÃÉÉ ĞÏÓÌÅÄÏ×ÁÔÅÌØÎÙÈ ÉÎÔÅÒÆÅÊÓÏ×
-Summary(tr):	Seri arayüz ayarlama programı
-Summary(uk):	ğÒÏÇÒÁÍÁ ÄÌÑ ËÏÎÆ¦ÇÕÒÁÃ¦§ ĞÏÓÌ¦ÄÏ×ÎÉÈ ¦ÎÔÅÒÆÅÊÓ¦×
-Summary(zh_CN):	[ÏµÍ³]ÅäÖÃ´®¿ÚµÄ¹¤¾ß
-Summary(zh_TW):	[-A¨t$)B²Î]-A°t¸m$)B¦ê-A¤f$)Bªº-A¤u$)B¨ã
+Summary(de.UTF-8):   Konfigurationsprogramm fÃ¼r die serielle Schnittstelle
+Summary(es.UTF-8):   Programa de configuraciÃ³n de interface serial
+Summary(fr.UTF-8):   Programme de configuration de l'interface sÃ©rie
+Summary(pl.UTF-8):   Program konfigurujÄ…cy interfejsy szeregowe
+Summary(pt_BR.UTF-8):   Programa de configuraÃ§Ã£o de interface serial
+Summary(ru.UTF-8):   ĞŸÑ€Ğ¾Ğ³Ñ€Ğ°Ğ¼Ğ¼Ğ° Ğ´Ğ»Ñ ĞºĞ¾Ğ½Ñ„Ğ¸Ğ³ÑƒÑ€Ğ°Ñ†Ğ¸Ğ¸ Ğ¿Ğ¾ÑĞ»ĞµĞ´Ğ¾Ğ²Ğ°Ñ‚ĞµĞ»ÑŒĞ½Ñ‹Ñ… Ğ¸Ğ½Ñ‚ĞµÑ€Ñ„ĞµĞ¹ÑĞ¾Ğ²
+Summary(tr.UTF-8):   Seri arayÃ¼z ayarlama programÄ±
+Summary(uk.UTF-8):   ĞŸÑ€Ğ¾Ğ³Ñ€Ğ°Ğ¼Ğ° Ğ´Ğ»Ñ ĞºĞ¾Ğ½Ñ„Ñ–Ğ³ÑƒÑ€Ğ°Ñ†Ñ–Ñ— Ğ¿Ğ¾ÑĞ»Ñ–Ğ´Ğ¾Ğ²Ğ½Ğ¸Ñ… Ñ–Ğ½Ñ‚ĞµÑ€Ñ„ĞµĞ¹ÑÑ–Ğ²
+Summary(zh_CN.UTF-8):   [ç³»ç»Ÿ]é…ç½®ä¸²å£çš„å·¥å…·
+Summary(zh_TW.UTF-8):   [-Aç³»$)Bçµ±]-Aé…ç½®$)Bä¸²-Aå£$)Bçš„-Aå·¥$)Bå…·
 Name:		setserial
 Version:	2.17
 Release:	13
@@ -32,37 +32,37 @@ startup You can put in /etc/sysconfig/serial in format:
 
 /dev/<serial_device> <setup parameters>
 
-%description -l de
-Setserial ist ein Programm zum Einsehen und Ändern verschiedener
-Attribute eines seriellen Geräts, z.B. Port, IRQ und andere Optionen
+%description -l de.UTF-8
+Setserial ist ein Programm zum Einsehen und Ã„ndern verschiedener
+Attribute eines seriellen GerÃ¤ts, z.B. Port, IRQ und andere Optionen
 des seriellen Ports.
 
-%description -l es
+%description -l es.UTF-8
 setserial es un programa que permite visualizar y alterar varios
 atributos de un dispositivo serial, incluyendo puerto, IRQ, y otras
 opciones.
 
-%description -l fr
+%description -l fr.UTF-8
 setserial est un programme permettant de consulter et de modifier les
-différents attributs d"un périphérique série, dont son port, son IRQ
-et autres options du port série.
+diffÃ©rents attributs d"un pÃ©riphÃ©rique sÃ©rie, dont son port, son IRQ
+et autres options du port sÃ©rie.
 
-%description -l pl
-Setserial umo¿liwia odczytanie i zmianê wielu parametrów portu
-szeregowego (adres, przerwanie itp.). Wszystkie parametry dotycz±ce
-ustawiania parametrów portów szeregowych w trakcie startu systemu
-mo¿na wstawiaæ do pliku /etc/sysconfig/serial w formacie:
+%description -l pl.UTF-8
+Setserial umoÅ¼liwia odczytanie i zmianÄ™ wielu parametrÃ³w portu
+szeregowego (adres, przerwanie itp.). Wszystkie parametry dotyczÄ…ce
+ustawiania parametrÃ³w portÃ³w szeregowych w trakcie startu systemu
+moÅ¼na wstawiaÄ‡ do pliku /etc/sysconfig/serial w formacie:
 
-/dev/<urz±dzenie> <parametry>
+/dev/<urzÄ…dzenie> <parametry>
 
-%description -l pt_BR
-O setserial é um programa que permite visualizar e alterar vários
+%description -l pt_BR.UTF-8
+O setserial Ã© um programa que permite visualizar e alterar vÃ¡rios
 atributos de um dispositivo serial, incluindo porta, IRQ, e outras
-opções.
+opÃ§Ãµes.
 
-%description -l tr
-Setserial, bir seri aygıtın bağlantı noktası, kesme numarası gibi
-özelliklerini denetlemenizi ve değiştirmenizi sağlayan bir programdır.
+%description -l tr.UTF-8
+Setserial, bir seri aygÄ±tÄ±n baÄŸlantÄ± noktasÄ±, kesme numarasÄ± gibi
+Ã¶zelliklerini denetlemenizi ve deÄŸiÅŸtirmenizi saÄŸlayan bir programdÄ±r.
 
 
 %prep
