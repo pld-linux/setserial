@@ -11,7 +11,7 @@ Summary(zh_CN.UTF-8):	[系统]配置串口的工具
 Summary(zh_TW.UTF-8):	[-A系$)B統]-A配置$)B串-A口$)B的-A工$)B具
 Name:		setserial
 Version:	2.17
-Release:	17
+Release:	18
 License:	GPL
 Group:		Applications/System
 Source0:	ftp://tsx-11.mit.edu/pub/linux/sources/sbin/%{name}-%{version}.tar.gz
