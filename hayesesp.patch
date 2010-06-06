@@ -1,0 +1,11 @@
+--- setserial-2.17/setserial.c.wiget	2010-06-06 12:16:57.825120259 +0200
++++ setserial-2.17/setserial.c	2010-06-06 12:17:23.967756450 +0200
+@@ -21,6 +21,8 @@
+ #endif
+ #ifdef HAVE_LINUX_HAYESESP_H
+ #include <linux/hayesesp.h>
++#else
++#undef TIOCGHAYESESP
+ #endif
+ #include <linux/serial.h>
+ 
