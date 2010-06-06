@@ -11,13 +11,15 @@ Summary(zh_CN.UTF-8):	[系统]配置串口的工具
 Summary(zh_TW.UTF-8):	[-A系$)B統]-A配置$)B串-A口$)B的-A工$)B具
 Name:		setserial
 Version:	2.17
-Release:	18
+Release:	19
 License:	GPL
 Group:		Applications/System
 Source0:	ftp://tsx-11.mit.edu/pub/linux/sources/sbin/%{name}-%{version}.tar.gz
 # Source0-md5:	c4867d72c41564318e0107745eb7a0f2
 Source1:	%{name}-rc.serial
 Source2:	%{name}.8.pl
+Patch1:		hayesesp.patch
+Patch2:		exit.patch
 BuildRequires:	autoconf
 BuildRequires:	groff
 Requires:	rc-scripts
@@ -67,6 +69,8 @@ Setserial, bir seri aygıtın bağlantı noktası, kesme numarası gibi
 
 %prep
 %setup -q
+%patch1 -p1
+%patch2 -p1
 
 %build
 %{__autoconf}
