@@ -69,8 +69,8 @@ Setserial, bir seri aygıtın bağlantı noktası, kesme numarası gibi
 
 %prep
 %setup -q
-%patch1 -p1
-%patch2 -p1
+%patch -P1 -p1
+%patch -P2 -p1
 
 %build
 %{__autoconf}
